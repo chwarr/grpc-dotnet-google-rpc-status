@@ -51,6 +51,15 @@ cd example/client
 dotnet run
 ```
 
+# Determining what status details an API may return
+
+You are _likely_ safe assuming that `grpc-status-details-bin` is a Protocol
+Buffer serialized `google.rpc.Status` message.
+
+You will have to consult the documentation of the gRPC service methods you
+are invoking to determine what messages to expect in the
+`google.rpc.Status.details` field.
+
 # Troubleshooting
 
 If you try to use this approach in your own service and your don't see the

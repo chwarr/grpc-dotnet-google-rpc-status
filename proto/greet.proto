@@ -7,6 +7,10 @@ package greet;
 // The greeting service definition.
 service Greeter {
   // Sends a greeting
+  //
+  // If the status code is FAILED_PRECONDITION, then grpc-status-details-bin
+  // will contain a google.rpc.Status message with google.rpc.BadRequest
+  // messages as details.
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
@@ -18,8 +22,4 @@ message HelloRequest {
 // The response message containing the greetings.
 message HelloReply {
   string message = 1;
-}
-
-message FailureDetails {
-  string what_was_wrong = 1;
 }

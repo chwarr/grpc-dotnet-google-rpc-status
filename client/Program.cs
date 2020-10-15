@@ -66,11 +66,15 @@ namespace grpc_dotnet
 
         private static void PrintAny(Any any)
         {
-            // fallback to printing the any directly, which will include the
+            // Fallback to printing the any directly, which will include the
             // type URL at a minimum
             object objToPrint = any;
 
-            // additional message types can be added here
+            // The method we are invoking says that it will include BadRequest
+            // messages as details.
+            //
+            // Should the API return additional message types, they can be
+            // added here like the PreconditionFailure example below.
             if (any.TryUnpack(out Google.Rpc.BadRequest br))
             {
                 objToPrint = br;
