@@ -11,10 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.CommonProtos" Version="2.2.0" />
-    <PackageReference Include="Google.ProtoBuf" Version="3.13.0" />
-    <PackageReference Include="Grpc.AspNetCore" Version="2.32.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.32.0" />
+    <PackageReference Include="Google.Api.CommonProtos" Version="2.5.0" />
+    <PackageReference Include="Google.ProtoBuf" Version="3.20.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.45.0" />
   </ItemGroup>
 
 </Project>
